@@ -1,0 +1,57 @@
+.display
+{
+   text-align: center;
+   color: black;
+}
+.card
+{
+    margin-top: 2%;
+    background-color: white;
+}
+.letters
+{
+    text-align: center;
+}
+.letter1
+{
+  color : blue;
+font-size: 30px;
+}
+.letter2
+{
+color : red;
+font-size : 30px;
+}
+.letter3
+{
+color : green;
+font-size: 30px;
+}
+.letter4
+{
+  color : blue;
+  font-size: 30px;
+}
+.letter5
+{
+font-size: 30px;
+color : red;
+}
+.letter6
+{
+font-size: 30px;
+color : yellow;
+}
+.row
+{
+    padding-top: 3%;
+padding-bottom: 5%;
+}
+.container
+{
+    background-color: white;
+}
+.logout
+{
+    float: right;
+}
