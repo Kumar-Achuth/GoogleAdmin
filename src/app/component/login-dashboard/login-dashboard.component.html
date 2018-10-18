@@ -4,10 +4,8 @@
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
   crossorigin="anonymous">
-<div class="logout">
-  <a href="/loginAdmin" class="btn btn-primary">Logout</a>
-</div>
-<div class="container">
+
+<div class="container-fluid">
   <div class="card ">
     <div class="letters" fxLayout="row">
       <span class="letter1">F</span>
@@ -16,40 +14,29 @@
       <span class="letter4">D</span>
       <span class="letter5">O</span>
       <span class="letter6">O</span>
+      <span class="logout">
+          <a href="/loginAdmin" class="btn btn-primary">Logout</a>
+      </span>
     </div>
     <div class="display">
       <h1 class="display-5">Welcome to Admin Dashboard </h1>
     </div>
   </div>
-  <div class="container">
+  
+  <div class="container-fluid " style="overflow-x:auto">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-lg-4"></div>
+      <div class="card col-lg-4" fxLayoutAlign = "space-between">
         <div style ="text-transform: uppercase;"  id = "services">
-
-
-        <!-- </div> -->
-        <!-- <div class="card text-white bg-warning">
-          <div class="card-body">
-            <h5 class="card-title">Basic Services</h5>
-            <p class="card-text">Ability to add notes , reminders, To-do Lists.</p>
-          </div>
-        </div> -->
       </div>
       </div>
-      <!-- <div class="col-sm-6 ">
-        <div class="card text-white bg-danger">
-          <div class="card-body ">
-            <h5 class="card-title">Advanced Services </h5>
-            <p class="card-text">Ability to add Images , Urls, Posts and much more.</p>
-          </div>
-        </div>
-      </div> -->
+      <div class="col-lg-4"></div>
     </div>
-    <div class="card bg-success">
-      <table id="userList" class="display nowrap" style="width:100%; color: black;">
+    <div class="card ">
+      <table id="userList" class="display nowrap " style="width:100%; color: black; overflow-x: auto">
         <thead>
           <tr>
-            <th scope="col"> # </th>
+            <th scope="col">#</th>
             <th scope="col">First name</th>
             <th scope="col">Last name</th>
             <th scope="col">Email ID</th>

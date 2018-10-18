@@ -15,6 +15,27 @@ export class LoginAdminComponent implements OnInit {
 $(document).ready(function(){
   // const Url = 'http://34.213.106.173/api/user/adminLogin';
   $('.btn').click(function(){
+   
+        var email=$('#inputEmail').val();
+        var password=$('#inputPassword').val()
+        var at = email.indexOf("@");
+        var dot = email.indexOf(".");
+        var com = email.indexOf("com");
+      if(email==""){
+        $('#email').focus(); 
+        $('#msg').text("Enter an email id");
+        return false;
+      }
+      else if (password == "" ){
+        $("#inputPassword").focus();
+        $('#msgp').text("Enter a password");
+        return false;
+      }
+      else if (at < 1 || (dot - at) < 2 || com < 1){
+        $("#inputEmail").focus();
+        $('#msg').text("Enter valid email id");
+        return false;
+  }
     const data = {
           "email" : $("#inputEmail").val(),
           "password" : $("#inputPassword").val()
@@ -31,7 +52,7 @@ $(document).ready(function(){
       },
       error : function(error){
         console.log(error)
-        $(`p#errorMessage`).html('Email or Password Incorrect')
+        $(`p#errorMessage`).html('Email/Password Incorrect')
       }
     })
     return false;
