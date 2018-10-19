@@ -12,6 +12,9 @@ export class LoginAdminComponent implements OnInit {
 
   ngOnInit() {
 
+    
+    
+
 $(document).ready(function(){
   // const Url = 'http://34.213.106.173/api/user/adminLogin';
   $('.btn').click(function(){
@@ -48,7 +51,7 @@ $(document).ready(function(){
       success : function(result){
         console.log(result)
         localStorage.setItem('token',result.id)
-        window.location.href="/loginDashboard"
+        document.location.href="/loginDashboard"
       },
       error : function(error){
         console.log(error)

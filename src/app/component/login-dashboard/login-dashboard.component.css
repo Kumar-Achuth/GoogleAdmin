@@ -6,7 +6,7 @@
 .card
 {
     margin-top: 2%;
-    background-color: lightskyblue;
+    background-color: honeydew;
 }
 .letters
 {
@@ -53,5 +53,6 @@ padding-bottom: 5%;
 }
 .logout
 {
+    color: white;
     float: right;
 }
