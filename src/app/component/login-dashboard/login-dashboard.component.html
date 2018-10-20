@@ -1,8 +1,6 @@
-
-
 <div class="container-fluid">
   <div class="card ">
-    <div class="letters" fxLayout="row">
+    <div class="letters" fxLayout="row" style="font-style:2vw">
       <span class="letter1">F</span>
       <span class="letter2">U</span>
       <span class="letter3">N</span>
@@ -13,7 +11,7 @@
         <div id="log" class="btn btn-primary">Logout</div>
       </span>
     </div>
-    <div class="display">
+    <div class="display"  style="font-style:2vw">
       <h1 class="display-5">Welcome to Admin Dashboard </h1>
     </div>
   </div>
@@ -37,34 +35,18 @@
             <th scope="col" >Services</th>
           </tr>
         </thead>
-        <!-- <tfoot>
-          <tr>
-            <th >#</th> 
-              <th>First name</th>
-              <th>Last name</th>
-              <th>Email</th>
-              <th>Services</th>
-           
-          </tr>
-      </tfoot> -->
       </table>
     </div>
   </div>
 </div>
-
-
-
-
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="myDataPopup" style="display:none">
     Launch demo modal
   </button>
-  
-  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">User Data</h5>
+          <h5 class="modal-title" id="exampleModalLabel">User Credentials</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -78,8 +60,6 @@
          Service : <label id="service"></label><br>
           Created Date : <label id="createdDate"></label><br>
          Modified Date :  <label id="modifiedData"></label><br>
-         <!-- <label id="userName"></label><br> -->
-         <!-- <label id="email"></label><br> -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

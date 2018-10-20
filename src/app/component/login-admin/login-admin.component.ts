@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery'
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-login-admin',
@@ -12,11 +12,7 @@ export class LoginAdminComponent implements OnInit {
 
   ngOnInit() {
 
-    
-    
-
 $(document).ready(function(){
-  // const Url = 'http://34.213.106.173/api/user/adminLogin';
   $('.btn').click(function(){
    
         var email=$('#inputEmail').val();

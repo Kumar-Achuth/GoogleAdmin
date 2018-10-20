@@ -14,7 +14,7 @@ export class LoginDashboardComponent implements OnInit {
   ngOnInit() {
     var token = localStorage.getItem('token');
 
-/** Api for getting UserList  */
+            /** Api for getting UserList  */
 
     $(document).ready(function () {
       $(function () {
@@ -43,7 +43,6 @@ export class LoginDashboardComponent implements OnInit {
   } else {
      users.splice( index, 1 );
   }
-  $(this).toggleClass('selected');
  console.log(result.data.data[myindex].firstName)
   $("#firstName").text(result.data.data[myindex].firstName);
   $("#lastName").text(result.data.data[myindex].lastName);
@@ -54,10 +53,8 @@ export class LoginDashboardComponent implements OnInit {
   $("#modifiedDate").text(result.data.data[myindex].modifiedDate);
   $("#userName").text(result.data.data[myindex].userName);
   $("#email").text(result.data.data[myindex].email);
-
   $("#myDataPopup").click();
 });
-
             console.log(users)
           },
           error: function (error) {
@@ -68,8 +65,8 @@ export class LoginDashboardComponent implements OnInit {
       })
     })
 
-    
-    /** User Services */
+          /** Api for  User Services */
+  
     $(document).ready(function () {
       $(function () {
         $.ajax({
@@ -90,8 +87,8 @@ export class LoginDashboardComponent implements OnInit {
             for (let index = 0; index < arr.length; index++) {
               html += "<div class=' col-mr-4 col-md-6 col-sm-6 col-xs-6 col-lg-6 '>";
               html += "<div class='card '>";
-              html += "<div class='card text-black bg-info mb-3 '>" + arr[index].service + "</div>";
-              html += "<div class='card-body  '>" + arr[index].count + "</div>";
+              html += "<div class='card text-black bg-success mb-3 '>" + arr[index].service + "</div>";
+              html += "<div class='card-body '>" + arr[index].count + "</div>";
               html += "</div";
               $("#services").html(html);
             }
@@ -100,7 +97,7 @@ export class LoginDashboardComponent implements OnInit {
       })
     })
 
-
+                 /** Api for logout  */
 
 
     $(document).ready(function () {
@@ -116,51 +113,9 @@ export class LoginDashboardComponent implements OnInit {
             localStorage.removeItem('token')
             document.location.href= '/loginAdmin'
           },
-       
         })
-   
       })
     })
-
-
-
-    // $(document).ready(function () {
-    //   $.click(function() {
-    //     $.ajax({
-    //       url: 'http://34.213.106.173/api/user/{id}',
-    //       type: "GET",
-    //       headers: {
-    //         'Authorization': token,
-    //       },
-    //       success: function () {
-    //         console.log("Logout Successfull");
-    //         localStorage.removeItem('token')
-    //         document.location.href= '/loginAdmin'
-    //       },
-       
-    //     })
-   
-    //   })
-    // })
-
-
-  //   $(document).ready(function() {
-  //     var selected = [];
-   
-  //     $("#userList").DataTable({
-  //         "processing": true,
-  //         "serverSide": true,
-  //         "rowCallback": function( row, data ) {
-  //             if ( $.inArray(data.DT_RowId, selected) !== -1 ) {
-  //                 $(row).addClass('selected');
-  //             }
-  //         }
-  //     });
-   
-    
-  // } );
-
-
   }
 }
 
