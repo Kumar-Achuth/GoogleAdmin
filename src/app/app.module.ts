@@ -6,12 +6,14 @@ import { LoginDashboardComponent } from './component/login-dashboard/login-dashb
 import { AppRoutingModule } from './app-routing/app-routing.module'
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { QuestionAdminComponent } from './component/question-admin/question-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginAdminComponent,
-    LoginDashboardComponent
+    LoginDashboardComponent,
+    QuestionAdminComponent
   ],
   imports: [
     BrowserModule,
