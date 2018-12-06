@@ -7,10 +7,11 @@ import * as $ from "jquery";
   styleUrls: ['./question-admin.component.css']
 })
 export class QuestionAdminComponent implements OnInit {
-
   constructor() { }
   ngOnInit() {
-
+    $("#log").click(function () {
+      $(location).attr('href', "loginDashboard")
+      })
     $(document).ready(function () {
       var token = localStorage.getItem('token');
       var questionArray = [];
@@ -22,7 +23,6 @@ export class QuestionAdminComponent implements OnInit {
           'Authorization': token,
         },
         error: function (response) {
-          // console.log('error');
           return false;
         },
         success: function (response) {
@@ -36,14 +36,14 @@ export class QuestionAdminComponent implements OnInit {
           var questionArray1 = $('#userList').DataTable({
             data: questionArray,
             scroller: true,
-            scrollY: 200,
+            scrollY: 360,
             scrollX: false,
             "columnDefs": [{
               "targets": -1,
               "defaultContent":
                 '<div class="btn-group">' +
-                '<button class="newBtn btn btn-info btn-sm" type="button">Approved</button>' + '<div>' + '</div>'
-                + '<button class="Mybtn btn btn-info btn-sm"  type="button">Reject</button>'
+                '<button class="newBtn btn btn-success btn-sm" type="button">Approve</button>' + '<div>' + '</div>'
+                + '<button class="Mybtn btn btn-danger btn-sm" style="margin-left:10px" type="button">Reject</button>'
                 + '</div>'
             }]
           });
@@ -104,6 +104,7 @@ export class QuestionAdminComponent implements OnInit {
                 console.log('success', response);
                 console.log(response.data);
                 alert('Rejected')
+                location.reload(true)
               }
             });
           });

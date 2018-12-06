@@ -12,6 +12,10 @@ export class LoginDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+$("#btn").click(function () {
+  $(location).attr('href', "questionAdmin")
+  })
     var token = localStorage.getItem('token');
 
     /** Api for getting UserList  */
